@@ -17,7 +17,7 @@
     <h1>Questão 03</h1>
 <?php
     for ($i = 1; $i <= 100; $i ++) {
-        echo $i, ' + ' ,$i, ' = ', $i + $i;
+        echo $i. ' + ' .$i. ' = '. $i + $i;
     }
 ?>
     <h1>Questão 04</h1>
@@ -39,15 +39,47 @@
 <?php
     $produtos = array('mesa' => 50, 'cadeira' => 100, 'computador' => 1000);
     foreach ($produtos as $chave => $produto) {
-        echo  $chave , $produto;
+        echo  $chave. $produto;
     }
 ?>
     <h1>Questão 07</h1>
 <?php
-    $numeros = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    $numeros = array (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    $contador = 0;
     foreach ($numeros as $numero) {
         if ($numero > 5) {
-            echo count($numeros);
+            $contador ++;
         }
     }
+    echo $contador;
+?>
+    <h1>Questão 08</h1>
+<?php
+    $frutas = array ('maçã', 'uva', 'goiaba', 'melancia', 'manga');
+    $contador = 0;
+    foreach ($frutas as $fruta) {
+        $contador ++;
+        echo $contador. $fruta;
+    }
+?>
+    <h1>Questão 09</h1>
+<?php
+    $numeros = array (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    $contador = 0;
+    foreach ($numeros as $numero) {
+        $contador ++;
+        echo $numero. ' + ' .$contador. ' = ' .$numero + $contador;
+    }
+?>
+    <h1>Questão 10</h1>
+<?php
+    $numero = 11;
+    while ($numero > 1) {
+        $numero --;
+        echo $numero;
+    }
+?>
+    <h1>Questão 11</h1>
+<?php
+    
 ?>
