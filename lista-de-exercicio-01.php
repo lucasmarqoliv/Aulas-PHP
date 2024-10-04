@@ -138,8 +138,8 @@
     
 //13 - Crie três variáveis $lado1, $lado2 e $lado3. Use if-else para verificar se os lados formam um triângulo e imprima uma mensagem correspondente.
     $lado1 = 5;
-    $lado2 = 9;
-    $lado3 = 10;
+    $lado2 = 2;
+    $lado3 = 1;
     if ($lado1 < ($lado2 + $lado3) and $lado2 < ($lado1 + $lado3) and $lado3 < ($lado1 + $lado2)) {
         echo 'os lados formam um triangulo.';
     } 
