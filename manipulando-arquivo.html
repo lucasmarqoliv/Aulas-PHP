@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário de Entrada de Dados</title>
 </head>
 <body>
-    <form action="manipulando-arquivo.php" method="post">
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" id="">
-        <input type="submit" value="Enviar">
+    <h1>Coleta de Dados</h1>
+    <form action="manipulando-arquivo.php" method="POST">
+        <label for="dado">Digite um dado:</label>
+        <input type="text" id="dado" name="dado" required>
+        <button type="submit">Enviar</button>
     </form>
 </body>
 </html>
