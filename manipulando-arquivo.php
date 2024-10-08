@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $arquivo = 'dados.txt';
 
     // Abre o arquivo no modo 'a' (append), para adicionar dados ao final
-    $arquivo_aberto = fopen($arquivo, 'a');
+    $arquivo_aberto = fopen($arquivo, 'w+');
 
     // Escreve o dado no arquivo, adicionando uma nova linha no final
     fwrite($arquivo_aberto, $dado . "\r\n"); // "\r\n" adiciona uma nova linha (Windows)
