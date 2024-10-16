@@ -1,0 +1,36 @@
+Lucas
+lucasmarqoliv@gmail.com
+123456
+2024-10-16
+06937869304
+3638599
+Silva
+thiagofoltran91854528@gmail.com
+654321
+2024-10-15
+123456789
+123456
+nome: Oliveira
+E-mail: lucasmarq1410@gmail.com
+Senha:123456789
+Data de Nascimento: 2024-10-14
+CPF: 123456789
+RG: 4321
+Nome: Ze
+E-mail: ze@gmail.com
+Senha: $2y$10$vrKh8tmBN1da6IYsoAfJh.WFT9vTNdWV0LYjSHO4OhgAyUhFhJZLe
+Data de Nascimento: 1996-03-08
+CPF: 06937869304
+RG: 3638599
+Nome: Lucas
+E-mail: lucasmarqoliv@gmail.com
+Senha: $2y$10$4DJrY/keoJ0mv8i4qzWsuOd/2s7upmjqo5hzidtRVC1bKqkWdiBtm
+Data de Nascimento: 2024-10-16
+CPF: 06937869304
+RG: 3638599
+Nome: Lucas
+E-mail: lucasmarqoliv@gmail.com
+Senha: $2y$10$ZaNcTH8BIbL7pKjvhqUpmu/S.jeU38jiIeqe5o5WDog8JRSxetj6e
+Data de Nascimento: 2024-10-16
+CPF: 06937869304
+RG: 3638599
