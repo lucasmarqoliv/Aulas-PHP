@@ -1,0 +1,70 @@
+[
+    {
+        "nome": "mac book",
+        "preco": 5000
+    },
+    {
+        "nome": "tablet",
+        "preco": 7000
+    },
+    {
+        "nome": "guitarra lespaul",
+        "preco": 8000
+    },
+    {
+        "nome": "guitarra jackson",
+        "preco": 2000
+    },
+    {
+        "nome": "guitarra fender",
+        "preco": 6000
+    },
+    {
+        "nome": "guitarra fender",
+        "preco": 6000
+    },
+    {
+        "nome": "guitarra fender",
+        "preco": 6000
+    },
+    {
+        "nome": "tablet",
+        "preco": 7000
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    },
+    {
+        "nome": "lucas",
+        "preco": "321"
+    }
+]

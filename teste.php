@@ -1,30 +1,3 @@
-<?php
-    $produtoBuscado = $_GET['produto'] ?? '';
-    $produtos = [
-        ['nome' => 'mac book', 'preco' => 5000],
-        ['nome' => 'tablet', 'preco' => 7000],
-        ['nome' => 'guitarra lespaul', 'preco' => 8000],
-        ['nome' => 'guitarra jackson', 'preco' => 2000],
-        ['nome' => 'guitarra fender', 'preco' => 6000],
-    ];
-
-    $produtosEncontrados = array_filter($produtos, function($produto) use ($produtoBuscado) {
-        return str_contains(
-            mb_strtolower($produto['nome']),
-            mb_strtolower($produtoBuscado)
-        ); 
-    });
-
-    // foreach($produtos as $chave => $produto) {
-    //     if (!str_contains(
-    //         mb_strtolower($produto['nome']),
-    //         mb_strtolower($produtoBuscado))
-    //     ) {
-    //         unset($produtos[$chave]);
-    //     }
-    // }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,29 +8,49 @@
 
 </head>
 <body>
-    <h3 class="container border mt-3">Lista de produtos</h3>
-    <form action="" method="get" class="container">
+    <h3 class="container border mt-3 text-center">Lista de produtos</h3>
+    <form action="" method="POST" class="container">
         <div class="form-inline">
-            <input type="text" name="produto" class="form-control" placeholder="O que você procura?">
+            <input type="text" name="produto" class="form-control" placeholder="Digite o produto">
+            <input type="number" step="any" name="preco" class="form-control mt-2" placeholder="Digite o preço">
             <div class="col-auto my-1 container ml-2">
-                <button type="submit" class="btn btn-primary">Buscar</button>
+                <button type="submit" class="btn btn-primary mt-1">Adicionar</button>
             </div>
         </div>
     </form>
     <hr>
     <div class="container border mt-4">
     <ul class="list-group ml-2">
-        <?php if(count($produtosEncontrados)> 0) :?>
-            <?php 
-            foreach($produtosEncontrados as $produto) {
-                echo '<li>'.$produto['nome']. ' - R$ ' . number_format($produto['preco'],2,',','.').'</li>';
-            }
+            <?php
+                $arquivo = 'texto.txt';
+                if (file_exists($arquivo)) {
+                    $conteudo = file_get_contents($arquivo);
+                    $produtos = json_decode($conteudo, true);
+                } else {
+                    $produtos = [
+                        ['nome' => 'mac book', 'preco' => 5000],
+                        ['nome' => 'tablet', 'preco' => 7000],
+                        ['nome' => 'guitarra lespaul', 'preco' => 8000],
+                        ['nome' => 'guitarra jackson', 'preco' => 2000],
+                        ['nome' => 'guitarra fender', 'preco' => 6000],
+                    ];
+                }
+
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    $novo_produto = [
+                        'nome' => $_POST['produto'],
+                        'preco' => $_POST['preco']
+                    ];
+                    array_push($produtos, $novo_produto);
+
+                    $arquivoJSON = json_encode($produtos, JSON_PRETTY_PRINT);
+                    file_put_contents($arquivo, $arquivoJSON);
+                }
+
+                foreach ($produtos as $produto) {
+                    echo '<li>'.$produto['nome']. ' '.'R$' .' '. number_format($produto['preco'],2,',','.'). ' '.'<a href="">Excluir</a></li>';
+                }
             ?>
-            <?php else: ?>
-                <div class="alert alert-warning">
-                    Não foi encontrado nenhum registro com o termo encontrado: <strong><?php echo $produtoBuscado?></strong>
-                </div>
-        <?php endif; ?>
     </ul>
     </div>
 </body>
