@@ -14,7 +14,7 @@ $arquivo = 'texto.txt';
 $conteudo = file_get_contents($arquivo);
 $produtos = json_decode($conteudo, true);
 
-$acao = $_GET['acao']?? '';
+$acao = $_GET['acao'] ?? '';
 $produto = $_GET['produto'] ?? '';
 
 if ($acao == 'excluir') {
@@ -22,7 +22,8 @@ if ($acao == 'excluir') {
 
         foreach ($produtos as $chave => $item) {
             if ($item['nome'] == $produto) {
-                unset ('produtos'[$chave]);
+                unset ($produtos[$chave]);
+                file_put_contents($arquivo, json_encode($produtos));
             }
         }
     }
@@ -65,11 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="submit" name="botao">
     </form>
     <ul class="container border pl-4">
-    <?php
-            foreach($produtos as $produto) {
-                echo '<li>'. $produto['nome'].' '.'R$' .' '.number_format($produto['preco'],2,',','.').'</li>';
-            }
-        ?>
+        <?php foreach($produtos as $produto): ?>
+        <li>
+        <?php echo $produto['nome']; ?> -
+        R$ <?php echo number_format($produto['preco'], 2, ',','.');?>
+        <a href="?acao=excluir&produto=<?php echo $produto['nome'];?>">Excluir</a>
+        </li>
+        <?php endforeach;?>
     </ul>
 </body>
 </html>
