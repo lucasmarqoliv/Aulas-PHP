@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <h3 class="text-center">Bem vindo!</h3>
-    <form action="" method="post" class="container form-group form-inline d-block">
+    <form action="" method="POST" class="container form-group form-inline d-block">
         <input type="text" name="nome" placeholder="Nome do produto">
         <input type="number" step="any" name="preco" placeholder="Preço do produto">
         <input type="submit" name="botao">
