@@ -22,6 +22,7 @@ class Emprestimo {
         return $this -> id;
     }
 
+    // metodos com nomes compostos por convenção deve ser escritos com as inicias maiusculas
     public function getDataRetirada() {
         return $this -> data_retirada;
     }
