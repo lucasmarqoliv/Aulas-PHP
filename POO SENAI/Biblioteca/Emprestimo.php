@@ -1,6 +1,7 @@
 <?php
-
+// criação da classe
 class Emprestimo {
+    // atributos com encapsulamento private (pode ser acessado apenas dentro da classe) 
     private $id;
     private $data_retirada;
     private $data_devolucao;
@@ -8,6 +9,7 @@ class Emprestimo {
     private $membro_cpf;
 
     public function __construct($id, $data_retirada, $data_devolucao, $multa, $membro_cpf) {
+        // método especial que é executado automaticamente quando você cria um novo objeto da classe. Ele recebe parâmetros para inicializar os atributos do carro. 
         $this -> id = $id;
         $this -> data_retirada = $data_retirada;
         $this -> data_devolucao = $data_devolucao;
@@ -15,15 +17,16 @@ class Emprestimo {
         $this -> membro_cpf = $membro_cpf;
     }
 
+    // São métodos para acessar (getters) e modificar (setters) as propriedades de um objeto de maneira controlada. Embora as propriedades sejam privadas, os métodos públicos podem ser usados para interagir com elas.
     public function getId() {
         return $this -> id;
     }
 
-    public function getData_retirada() {
+    public function getDataRetirada() {
         return $this -> data_retirada;
     }
 
-    public function getData_devolucao() {
+    public function getDataDevolucao() {
         return $this -> data_devolucao;
     }
 
@@ -31,7 +34,7 @@ class Emprestimo {
         return $this -> multa;
     }
 
-    public function getMembro_cpf() {
+    public function getMembroCpf() {
         return $this -> membro_cpf;
     }
 
@@ -39,11 +42,11 @@ class Emprestimo {
         $this -> id = $id;
     }
 
-    public function setData_retirada($data_retirada) {
+    public function setDataRetirada($data_retirada) {
         $this -> data_retirada = $data_retirada;
     }
 
-    public function setData_devolucao($data_devolucao) {
+    public function setDataDevolucao($data_devolucao) {
         $this -> data_devolucao = $data_devolucao;
     }
 
@@ -51,7 +54,7 @@ class Emprestimo {
         $this -> multa = $multa;
     }
 
-    public function setMembro_cpf($membro_cpf) {
+    public function setMembroCpf($membro_cpf) {
         $this -> membro_cpf = $membro_cpf;
     }
     
