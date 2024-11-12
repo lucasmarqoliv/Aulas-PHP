@@ -1,3 +1,4 @@
+
 <?php
 
 // 2 - Crie uma classe chamada Carro com os seguintes atributos: marca (público) modelo (público) ano (privado) Adicione um método público setAno($ano) que valide o valor de $ano (o valor deve ser maior que 1885) e um método getAno() para retornar o ano.
