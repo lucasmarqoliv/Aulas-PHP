@@ -14,14 +14,15 @@ class Pessoa {
 
     public function setIdade($idade) {
         if ($idade > 0) {
-            return $this -> idade = $idade;
+            $this -> idade = $idade;
+            return $this;
         }
         else {
-            return 'Idade abaixo ou igual a zero!';
+            echo 'Idade abaixo ou igual a zero!';
         }
     }
 
     public function getIdade() {
-        return $this -> idade;
+        echo $this -> idade;
     }
 }
