@@ -16,7 +16,7 @@ class Cachorro {
         $this->idade = $idade;
     }
 
-    public function latir() {
+    public static function latir() { // metodo statico que pode ser setado sem precisar instancia-lo no objeto.
         return 'Woof Woof Woof!';
     }
 }
